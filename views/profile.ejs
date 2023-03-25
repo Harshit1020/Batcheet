@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+
+<head>
+    <title>Batcheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../stylesheets/profile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <div id="nav">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a style="color: #fff; font-family: Cyrene; font-size: 2vw;" class="navbar-brand" href="#">Batcheet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a style="color: #fff; font-family: Gilroy; font-size: 1.5vw;" class="nav-link active"
+                                aria-current="page" href="#">Welcome <%=user.name%></a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" href="/profile">profile</a> -->
+                        </li>
+                       <a id="lg" class="btn-danger" href="/logout">Logout</a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="left">
+    </div>
+    <div class="login-page">
+        <div class="form">
+            <lottie-player
+                src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"
+                background="transparent" speed="1" style="justify-content: center;" loop autoplay></lottie-player>
+            <form class="known-form" action="/join">
+                <input type="text" value="<%=user.name%>" placeholder="Enter your name" name="name" />
+                <button>Host a Meeting</button>
+            </form>
+            <form class="unknown-form" action="/joinold">
+                <input type="text" value="<%=user.name%>" placeholder="Enter your name" name="name" />
+                <input type="text" placeholder="Enter Meeting Id" name="meeting_id" />
+                <button>Join Meeting</button>
+                <p>
+                </p>
+            </form>
+        </div>
+    </div>
+    <!-- <script>
+    function show() {
+            $('form').animate({ height:"toggle",opacity:"toggle"},"slow")
+        }
+  </script> -->
+</body>
+
+</html>
